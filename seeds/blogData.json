@@ -1,0 +1,18 @@
+[
+    {
+        "body": "I much prefer NoSQL to MySQL2!",
+        "topic": "Databases",
+        "user_id": "1"
+    },
+    {
+        "body": "What is React?",
+        "topic": "Languages",
+        "user_id": "2"
+    },
+    {
+        "body": "Hot Take: 6 month bootcamp > Self-taught.",
+        "topic": "Discussion",
+        "user_id": "1"
+        
+    }
+]

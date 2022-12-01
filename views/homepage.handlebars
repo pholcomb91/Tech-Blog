@@ -1,0 +1,8 @@
+<div class="row col-12 container-fluid display-flex justify-content-center align-center p-2 new-comm">
+        <div class="col-9 container-fluid justify-content-center">
+                {{#each blog as |blog|}}
+                {{> blogPart blogData=blog}}
+                {{/each}}
+        </div>
+</div>
+<script src="./js/comment.js"></script>

@@ -1,0 +1,13 @@
+[
+    {
+       "id": 1,
+       "body": "Disagree, MySQL2 for the Win!",
+       "blog_id": 1,
+       "comment_date": "11-27-2022"
+    },
+    {
+        "id": 2,
+        "body": "React is s free and open source front-end JavaScript library for building user interfaces based on UI components.",
+        "blog_id": 2
+    }
+]

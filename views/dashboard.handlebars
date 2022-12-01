@@ -1,0 +1,45 @@
+<div class="col">
+  <div class="col-12 m-auto d-flex justify-content-center">
+    <h2>Welcome, {{user.username}}!</h2>
+  </div>
+
+  <div class="col-10 m-auto d-flex justify-content-center">
+    <div class="col d-flex container rounded border border-secondary bg-grey-500 p-1 m-1 justify-content-center">
+      <h3>Start a Conversation:</h3>
+
+    <form class="form new-convo-form">
+      <div class="form-group">
+        <label for="topic">Choose a topic:</label>
+        <select name="topics" class="border rounded" id="topics-list">
+            <option selected>Select a topic</option>
+            {{#each topicList as |topic|}}
+            {{> topicPart topo=topic}}
+            {{/each}}
+          {{!-- <option class="dropdown-item" id="newTopic">+ Add a Topic</option> --}}
+        </select>
+        <label for="topic">Or create a new topic:</label>
+        </br>
+        <input id='topic-input' class="border border-warning p-1 rounded bg-grey-500 text-secondary comm-input" type="text"></input>
+        <button class="btn btn-outline-warning rounded" id="new-topic-btn" type="submit">Add</button>
+        <textarea class="form-control rounded" type="text" id="convo-body" name="convo-body" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-warning" id="new-convo-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  {{#if user}}
+  <div class="col-md-6 project-list container rounded border border-secondary m-1">
+    <h3>Your Blogs:</h3>
+    {{#each user.conversations as |conversation|}}
+    <div class="row mb-2">
+      <div class="col-md-8 ">
+        <h4><a href=/conversation/{{conversation.id}}>{{conversation.body}}</a></h4>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
