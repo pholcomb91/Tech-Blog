@@ -1,9 +1,9 @@
-<div class="card text-center">
+<div class="card text-center shadow p-3 bg-body m-3" id="blog">
   <div class="card-header">
     {{blogData.user.username}}
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{blogData.topic}}</h5>
+    <h5 class="card-title"><a href="/blog/{{blogData.id}}">{{blogData.topic}}</a></h5>
     <p class="card-text">{{blogData.body}}</p>
   </div>
   <div class="card-footer text-muted">

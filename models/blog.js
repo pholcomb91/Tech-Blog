@@ -27,9 +27,6 @@ Blog.init(
             key: 'id',
         },
     },
-    // blog_date: {
-    //   type: DataTypes.DATEONLY,
-    // }
   },
   {
     sequelize,

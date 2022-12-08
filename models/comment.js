@@ -24,13 +24,20 @@ Comment.init(
                 key: 'id',
             },
         },
-        comment_date: {
-            type: DataTypes.DATEONLY,
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         },
     },
     {
         sequelize,
         timestamps: true,
+        createdAt: true,
+        updatedAt: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'comment', 

@@ -1,0 +1,20 @@
+<div class="card text-center shadow p-3 bg-body m-3" id="blog">
+  <div class="card-header">
+    {{blogData.user.username}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{blogData.topic}}</h5>
+    <p class="card-text">{{blogData.body}}</p>
+  </div>
+  {{!-- {{#if blogData.comments.blog_id: blogData.blog_id}} --}}
+  {{#each blogData.comment as |comment|}}
+  {{> commentPart comm=comment}}
+  {{/each}}
+  <div class="input-group">
+            <input id='comment-input' class="p-1 rounded text-secondary comm-input" placeholder='Add a comment' type="text"></input>
+            <button class="btn rounded" type="submit">Add</button>
+        </div>
+  <div class="card-footer text-muted">
+    {{blogData.createdAt}}
+  </div>
+</div>

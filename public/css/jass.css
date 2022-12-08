@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(42, 165, 163);
+}
+nav{
+    background-color: rgb(165, 87, 42);
+    color:rgb(42, 165, 163);
+}
+h1 {
+    font-size: 100px;
+    color: white;
+}
+.btn {
+    background-color: rgb(42, 165, 163);
+    color:rgb(165, 87, 42);
+}
+.btn2 {
+    background-color: rgb(165, 87, 42);
+    color:rgb(42, 165, 163);
+}
+#blog {
+    background-color: rgb(42, 165, 163);
+    color:rgb(165, 87, 42);
+}
+.border {
+    border-color: rgb(165, 87, 42);
+}
