@@ -29,8 +29,7 @@ router.get('/blog/:id', withAuth, async (req, res) => {
     try {
         const specificBlog = await Blog.findByPk(req.params.id, {
             include: [
-                User,
-                Comment,
+                User, {model: Comment, include: [User]}
             ],
         }); 
         const blog = specificBlog.get({ plain: true });

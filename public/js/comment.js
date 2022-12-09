@@ -1,10 +1,10 @@
 const newCommHandler = async (event) => {
     event.preventDefault();
-
-    var body = document.getElementById('comment-input').value;
-    var conversation_id = event.target.getAttribute("blog-id");
-    
-    if (body && conversation_id) {
+    var commentInputEl = document.getElementById('comment-input');
+    var body = commentInputEl.value;
+    var blog_id = commentInputEl.getAttribute("blog-id");
+    console.log("Comment.js is working")
+    if (body && blog_id) {
       const response = await fetch(`/api/comm`, {
         method: 'POST',
         body: JSON.stringify({ body, blog_id }),
@@ -22,4 +22,4 @@ const newCommHandler = async (event) => {
   };
 
 const element = document.getElementById('submit');
-element.addEventListener('submit', newCommHandler);
+element.addEventListener('click', newCommHandler);

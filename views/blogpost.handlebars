@@ -1,19 +1,26 @@
-<div class="card text-center shadow p-3 bg-body m-3" id="blog">
-  <div class="card-header">
-    {{blog.user.username}}
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">{{blog.topic}}</h5>
-    <p class="card-text">{{blog.body}}</p>
-  </div>
-  {{#each blog.comments as |comment|}}
-  {{> commentPart comm=comment}}
-  {{/each}}
-  <div class="input-group new-comm">
-    <input id='comment-input' blog-id='{{blog.id}}' class="p-1 rounded text-secondary comm-input" placeholder='Add a comment' type="text"></input>
-    <button class="btn rounded" type="submit" id="submit">Add</button>
-  </div>
-  <div class="card-footer text-muted">
-    {{blog.createdAt}}
-  </div>
+<div class="align-content-center text-center">
+        <div class="card text-center shadow p-3 bg-body m-3" id="blog">
+                <div class="card-header">
+                {{blog.user.username}}
+                </div>
+                <div class="card-body">
+                        <h5 class="card-title">{{blog.topic}}</h5>
+                        <p class="card-text">{{blog.body}}</p>
+                        <div>
+                        {{#each blog.comments as |comment|}}
+                        {{> commentPart comm=comment}}
+                        {{/each}}
+                        </div>
+                        <div class="card w-75 m-auto new-comm">
+                                <input id='comment-input' blog-id='{{blog.id}}' class="p-1 rounded text-secondary comm-input" placeholder='Add a comment' type="text"></input>
+                                <button class="btn rounded" type="submit" id="submit">Add</button>
+                        </div>
+                </div>
+                
+                
+                <div class="card-footer text-muted">
+                {{blog.createdAt}}
+                </div>
+        </div>
 </div>
+<script src="/js/comment.js"></script>

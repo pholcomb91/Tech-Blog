@@ -13,7 +13,7 @@ In the Command Line:
 Julian (https://github.com/juliandanciu)
 
 ## Links
-https://github.com/pholcomb91/Tech-Blog.git
+https://github.com/pholcomb91/Tech-Blog.git 
 https://pholcomb91.github.io/Tech-Blog/
 
 ## Preview
