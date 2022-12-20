@@ -13,7 +13,7 @@ In the Command Line:
 Julian (https://github.com/juliandanciu)
 
 ## Links
-https://github.com/pholcomb91/Tech-Blog.git 
+https://radiant-cliffs-17149.herokuapp.com/
 
 https://pholcomb91.github.io/Tech-Blog/
 
